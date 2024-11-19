@@ -35,36 +35,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Função para renderizar o gráfico
-    function renderChart() {
-        const ctx = document.getElementById('investmentChart').getContext('2d');
-        const chartData = {
-            labels: assets.map(asset => asset.name),
-            datasets: [{
-                data: assets.map(asset => asset.totalInvested),
-                backgroundColor: ['#4caf50', '#ffeb3b', '#ff9800', '#03a9f4'],
-            }]
-        };
+    const ctx = document.getElementById('myPieChart').getContext('2d');
 
-        // Verifica se o gráfico já foi criado e o destrói antes de criar um novo
-        if (window.investmentChart) {
-            window.investmentChart.destroy();
+    const myPieChart = new Chart(ctx, {
+      type: 'pie', // Define o tipo de gráfico como pizza
+      data: {
+        labels: ['Energia Solar Comunitária', 'Reciclagem Urbana Sustentável', 'Agricultura Regenerativa', 'Educação Ambiental'], // Legendas
+        datasets: [{
+          label: 'Distribuição de Linguagens',
+          data: [30, 25, 30, 15], // Valores para cada segmento
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.6)', // Cor para HTML
+            'rgba(54, 162, 235, 0.6)', // Cor para CSS
+            'rgba(255, 206, 86, 0.6)',  // Cor para JavaScript
+            'rgba(0, 255, 255)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(0, 255, 255)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top', // Posição da legenda
+          },
+          tooltip: {
+            enabled: true // Ativa o tooltip ao passar o mouse
+          }
         }
-
-        // Cria o gráfico
-        window.investmentChart = new Chart(ctx, {
-            type: 'pie',
-            data: chartData,
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    }
-                }
-            }
-        });
-    }
+      }
+    });
+    
 
     // Evento para adicionar dinheiro ao saldo
     document.getElementById('add-balance-form').addEventListener('submit', (e) => {
