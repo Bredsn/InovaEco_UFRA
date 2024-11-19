@@ -85,3 +85,10 @@ button {
 button:hover {
     background-color: #abc918;
 }
+
+canvas {
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+  }
+  
