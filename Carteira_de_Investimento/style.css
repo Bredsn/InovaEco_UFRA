@@ -90,5 +90,12 @@ canvas {
     max-width: 600px;
     margin: 20px auto;
     display: block;
-  }
+}
+
+@media(min-width: 339px) and (max-width: 1024px) {
+    canvas {
+        max-width: 90%; /* Ajusta o tamanho máximo do gráfico */
+        height: auto;   /* Mantém a proporção do gráfico */
+    }
+}
   
