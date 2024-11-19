@@ -38,6 +38,13 @@ button {
     font-size: 1em;
 }
 
+@media(max-width: 339px) {
+    button {
+        padding: 0.8rem;
+        margin-top: 10px;
+    }
+}
+
 button:hover {
     background-color: #abc918;
 }
