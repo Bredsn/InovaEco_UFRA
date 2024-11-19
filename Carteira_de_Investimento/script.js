@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     let balance = 0; // Saldo disponível para investir
     const assets = [
-        { name: 'Ação A', value: 0, totalInvested: 0 },
-        { name: 'Ação B', value: 0, totalInvested: 0 },
-        { name: 'Fundo Imobiliário', value: 0, totalInvested: 0 },
-        { name: 'Criptomoeda', value: 0, totalInvested: 0 },
+        { name: 'Reciclagem Urbana Sustentável', value: 0, totalInvested: 0 },
+        { name: 'Educação Ambiental', value: 0, totalInvested: 0 },
+        { name: 'Energia Solar Comunitária', value: 0, totalInvested: 0 },
+        { name: 'Agricultura Regenerativa', value: 0, totalInvested: 0 },
     ];
 
     // Função para atualizar o saldo total
