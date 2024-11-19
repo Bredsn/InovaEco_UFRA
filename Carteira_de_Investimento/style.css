@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Ubuntu;
+    background-color: #060b0e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wallet-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #f2f8f2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #f2f8f2; 
+}
+
+#total-balance {
+    font-size: 18px;
+    color: #f2f8f2;
+}
+
+.portfolio h2,
+.chart-container h2 {
+    margin: 20px 0 10px;
+    color: #f2f8f2;
+}
+
+#assets-list {
+    list-style-type: none;
+}
+
+#assets-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.chart-container {
+    margin-top: 20px;
+}
+
+form {
+    margin: 10px 0;
+}
+
+input[type="number"], select {
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #badf02;
+    color: #060b0e;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #abc918;
+}
